@@ -20,7 +20,7 @@ git clone https://github.com/DefaultYuan/Git-Pro.git A/B
 ```
 以上命令是将现有的仓库克隆到**A目录下的B文件夹**里面，如果后面没有添加**A/B**就会默认新建一个名为**Git-Pro**文件夹，且将仓库克隆到这个文件夹下面！
 
-### 提交
+### 提交代码到本地仓库
 当我们在本地修改了文件，比如修改了**README.md**文件，我们首先查看状态确定哪些文件当前处于什么状态！
 ```shell
 git status
