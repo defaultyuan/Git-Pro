@@ -72,6 +72,7 @@ git pull
 ```
 **fetch**跟**pull**有啥区别呢？？
 **fetch**从远程仓库抓取到本地之后不会自动**merge**操作，但**pull**会自动**merge**
+
 最后我们进行**push**操作
 ```shell
 git push
