@@ -88,6 +88,10 @@ git push
 ```shell
 git commit DefaultYuan.txt -m "fix 具体功能"
 ```
+# 将工作区的所有修改的文件一次性提交到本地仓库
+```shell
+git commit -a
+```
 # 提交显示所有改动的信息
 
 
