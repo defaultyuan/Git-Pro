@@ -100,7 +100,7 @@ git commit -v
 git commit -a
 ```
 这样会默认使用 vi 添加描述<br>
-当然也可以使用**-m**选项直接添加提交信息
+当然也可以使用`-m`选项直接添加提交信息
 ```shell
 git commit -a -m "fix 具体功能"
 ```
@@ -127,6 +127,36 @@ git diff --cached
 git diff HEAD
 ```
 `HEAD`关键字它指的是当前分支的最新提交，相当于一个**指针**,后续讲到新建分支也会提到它
+### stash的使用
+有时候我们在工作区进行开发并且不想提交的时候，这时我们又想`pull`最新代码；或者又想切到另外一个分支上修改紧急bug的时候<br>
+**git stash**可以暂存当前的工作区内容
+##### 可以先暂存当前的工作区的内容
+```shell
+git stash
+```
+等我们切到另外分支修改完了bug之后，可以切回之前分支
+##### 然后恢复之前工作区的内容继续开发
+```shell
+git stash pop
+```
+##### 也可以查看`stash`的Git栈信息
+```shell
+git stash list
+```
+当我们的`stash`栈列表里面有很多，并且我们想要找到对应的版本号
+##### 并且将我们想要的版本号为**stash@{2}**的工作内容取出来
+```shell
+git stash apply stash@{2}
+```
+##### 也可以查看版本号为**stash@{2}**的工作内容
+```shell
+git stash apply stash@{2}
+```
+当我们的`stash`栈列表的工作内容都应用回来的时候
+##### 可以将栈清空
+```shell
+git stash clear
+```
 ### 撤销操作
 
 
