@@ -37,7 +37,7 @@ modified:   README.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
-当前`README.md`文件是有做修改的，该文件还没有添加到stage的，提示我们可以通过[git add file]来添加，当然我们也可以通过[git checkout -- file]来撤销本次做到修改，建议不要轻易这么干！后续我会讲讲相关撤销操作。
+当前`README.md`文件是有做修改的，该文件还没有添加到stage的，提示我们可以通过**git add <file>**来添加，当然我们也可以通过**git checkout -- <file>**来撤销本次做到修改，建议不要轻易这么干！后续我会讲讲相关撤销操作。
 
 现在我们加入stage
 ```shell
