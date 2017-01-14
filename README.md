@@ -104,11 +104,11 @@ git commit -a
 ```shell
 git commit -a -m "fix 具体功能"
 ```
-##### 有时候我们需要对上一次提交的注释进行修改
+##### 有时候我们需要对上一次提交信息进行修改
 ```shell
 git commit --amend
 ```
-
+也可以后面添加参数`-m`做到修改
 ### 查看状态
 ##### 查看工作区中所有目录下文件的变动
 ```shell
@@ -157,6 +157,59 @@ git stash apply stash@{2}
 ```shell
 git stash clear
 ```
+### 分支
+分支在Git里面是比较廉价的，我们在开发的时候可以在本地仓库创建很多条分支
+##### 新建一条名字为dev的分支
+```shell
+git branch dev
+```
+这种创建方式会依然停留在当前分支
+##### 开发新功能、或者修改bug，我们会创建一条分支并切到新开分支上开发
+```shell
+git checkout -b dev_fixHot
+```
+##### 也可以从dev分支新建一个分支，指向指定`commit`
+```shell
+git branch dev f0299e2
+```
+`f0299e2`是随便写的，具体要以我们自己的`commit`
+##### 切换到指定分支
+```shell
+git checkout dev
+```
+分支其实也是指向某个`commit`的指针，`HEAD`也是一个指针，它指向当前工作目录下的`commit`<br>
+因此`checkout`就是让`HEAD`指向dev分支
+##### 删除dev分支
+```shell
+git branch -d dev
+```
+##### 强制删除dev分支
+```shell
+git branch -D dev
+```
+##### 将本地dev分支与dev_fixHot远程分支建立追踪关系
+```shell
+git branch --set-upstream dev origin/dev_fixHot
+```
+##### 添加一个dev远程分支
+```shell
+git push origin dev:dev
+```
+##### 删除dev远程分支
+```shell
+git push origin :dev
+```
+或者<br>
+```shell
+git push origin --delete dev
+```
+##### 选择一个`commit`,合并到当前分支
+```shell
+git cherry-pick f0299e2
+```
 ### 撤销操作
+TODO `reset`
+TODO `rebase`
+TODO `tag`
 
 
