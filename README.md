@@ -84,6 +84,10 @@ git push
 上面讲的是一些[**Git**基本操作](#basic)。<br>
 接下来讲讲一些Git进阶小技巧
 ### 代码提交技巧
-
+# 当我们要将`stage`里的修改分多次提交到本地仓库
+```shell
+git commit DefaultYuan.txt -m "fix 具体功能"
+```
+# 提交显示所有改动的信息
 
 
