@@ -12,7 +12,7 @@ git config --global user.email johndoe@example.com
 ```shell
 git config --list
 ```
-上面命令配置好的用户信息可以通过**git config --list**命令查看到，该命令到用户名、邮箱、别名、remote地址等等！真是一览无遗！当然也可以到.git目录下的查看config文件
+上面命令配置好的用户信息可以通过`git config --list`命令查看到，该命令到用户名、邮箱、别名、remote地址等等！真是一览无遗！当然也可以到.git目录下的查看config文件
 
 ### 从现有的仓库克隆到本地
 ```shell
@@ -21,7 +21,7 @@ git clone https://github.com/DefaultYuan/Git-Pro.git A/B
 以上命令是将现有的仓库克隆到**A目录下的B文件夹**里面，如果后面没有添加**A/B**就会默认新建一个名为**Git-Pro**文件夹，且将仓库克隆到这个文件夹下面！
 
 ### 提交代码到本地仓库
-当我们在本地修改了文件，比如修改了**README.md**文件，我们首先查看状态确定哪些文件当前处于什么状态！
+当我们在本地修改了文件，比如修改了`README.md`文件，我们首先查看状态确定哪些文件当前处于什么状态！
 ```shell
 git status
 ```
@@ -37,7 +37,7 @@ modified:   README.md
 
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
-当前**README.md**文件是有做修改的，该文件还没有添加到stage的，提示我们可以通过**git add <file>**来添加，当然我们也可以通过**git checkout -- <file>**来撤销本次做到修改，建议不要轻易这么干！后续我会讲讲相关撤销操作。
+当前`README.md`文件是有做修改的，该文件还没有添加到stage的，提示我们可以通过[git add file]来添加，当然我们也可以通过[git checkout -- file]来撤销本次做到修改，建议不要轻易这么干！后续我会讲讲相关撤销操作。
 
 现在我们加入stage
 ```shell
@@ -58,22 +58,22 @@ git commit -m "fix 具体哪个功能"
 ```shell
 git fetch
 ```
-接下来，我们就可以手动**merge**远程仓库的修改了
+接下来，我们就可以手动`merge`远程仓库的修改了
 ```shell
 git merge
 ```
-我们为了让我们的提交记录比较美观一些的话，在这里我们会用**rebase**去代替**merge**操作
+我们为了让我们的提交记录比较美观一些的话，在这里我们会用`rebase`去代替`merge`操作
 ```shell
 git rebase
 ```
-或者用**pull**来拉取代码
+或者用`pull`来拉取代码
 ```shell
 git pull
 ```
-**fetch**跟**pull**有啥区别呢？？
-**fetch**从远程仓库抓取到本地之后不会自动**merge**操作，但**pull**会自动**merge**
+`fetch`跟`pull`有啥区别呢？？
+`fetch`从远程仓库抓取到本地之后不会自动`merge`操作，但`pull`会自动`merge`
 
-最后我们进行**push**操作
+最后我们进行`push`操作
 ```shell
 git push
 ```
