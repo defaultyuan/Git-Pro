@@ -241,4 +241,5 @@ git revert 2126dce
 TODO `rebase`<br>
 TODO `tag`<br>
 
+[![weibo-logo]](http://weibo.com/2792951481)
 
