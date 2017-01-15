@@ -168,7 +168,7 @@ git branch dev
 ```shell
 git checkout -b dev_fixHot
 ```
-##### 也可以从dev分支新建一个分支，指向指定`commit`
+##### 也可以从当前分支新建一个dev分支，指向指定`commit`
 ```shell
 git branch dev f0299e2
 ```
