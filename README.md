@@ -241,5 +241,5 @@ git revert 2126dce
 TODO `rebase`<br>
 TODO `tag`<br>
 
-[![微博]](http://weibo.com/2792951481)
+[微博](http://weibo.com/2792951481)
 
