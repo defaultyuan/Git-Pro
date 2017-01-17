@@ -237,6 +237,20 @@ git reset 2126dce
 ```shell
 git revert 2126dce
 ```
+###起别名
+当我们有比较常用的命令行用的比较频繁，但是我们又觉得完整把它们敲出来费事
+#####可以在 `~/.gitconfig` 文件里面进行设置别名,添加`alias`
+```shell
+[alias]
+ft = fetch
+ck = checkout
+st = status
+br = branch
+rb = rebase
+lg = log
+```
+然后试一下`git st`就管用了！
+
 
 TODO `rebase`<br>
 TODO `tag`<br>
