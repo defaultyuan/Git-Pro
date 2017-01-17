@@ -99,7 +99,7 @@ git commit -v
 ```shell
 git commit -a
 ```
-这样会默认使用 vi 添加描述<br>
+这样会默认使用 vi 添加描述,我们也可以在`.git/config`的`core`中`editor = vim`指定编辑器<br>
 当然也可以使用`-m`选项直接添加提交信息
 ```shell
 git commit -a -m "fix 具体功能"
@@ -150,7 +150,7 @@ git stash apply stash@{2}
 ```
 ##### 也可以查看版本号为**stash@{2}**的工作内容
 ```shell
-git stash apply stash@{2}
+git stash show stash@{2}
 ```
 当我们的`stash`栈列表的工作内容都应用回来的时候
 ##### 可以将栈清空
