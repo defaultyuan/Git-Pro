@@ -8,19 +8,19 @@
 git config --global user.name "DefaultYuan"
 git config --global user.email johndoe@example.com
 ```
-### 查看配置信息
+## 查看配置信息
 ```shell
 git config --list
 ```
 上面命令配置好的用户信息可以通过`git config --list`命令查看用户名、邮箱、别名、remote地址等等！真是一览无遗！当然也可以到.git目录下的查看config文件
 
-### 从现有的仓库克隆到本地
+## 从现有的仓库克隆到本地
 ```shell
 git clone https://github.com/DefaultYuan/Git-Pro.git A/B
 ```
 以上命令是将现有的仓库克隆到**A目录下的B文件夹**里面，如果后面没有添加**A/B**就会默认新建一个名为**Git-Pro**文件夹，且将仓库克隆到这个文件夹下面！
 
-### 提交代码到本地仓库
+## 提交代码到本地仓库
 当我们在本地修改了文件，比如修改了`README.md`文件，我们首先查看状态确定哪些文件当前处于什么状态！
 ```shell
 git status
@@ -53,7 +53,7 @@ git commit -m "fix 具体哪个功能"
 ```
 如果本地我们改的内容有点多，涉及到修改多个模块的代码，建议多次添加并提交！
 
-### 将本地代码提交到远程仓库
+## 将本地代码提交到远程仓库
 继上面的提交操作之后<br>
 我们先拉取一下远程仓库的更新内容
 ```shell
@@ -84,7 +84,7 @@ git push
 上面讲的是一些[**Git**基本操作](#basic)。<br>
 接下来讲讲一些Git进阶小技巧
 
-### 提交技巧
+## 提交技巧
 ##### 当我们要将`stage`里的修改分多次提交到本地仓库,也就是具体到哪个文件
 ```shell
 git commit DefaultYuan.txt -m "fix 具体功能"
@@ -107,7 +107,7 @@ git commit -a -m "fix 具体功能"
 git commit --amend
 ```
 也可以后面添加参数`-m`做到修改
-### 查看状态
+## 查看状态
 ##### 查看工作区中所有目录下文件的变动
 ```shell
 git status
@@ -125,7 +125,7 @@ git diff --cached
 git diff HEAD
 ```
 `HEAD`关键字它指的是当前分支的最新提交，相当于一个**指针**,后续讲到新建分支也会提到它
-### stash的使用
+## `stash`的使用
 有时候我们在工作区进行开发并且不想提交的时候，这时我们又想`pull`最新代码；或者又想切到另外一个分支上修改紧急bug的时候<br>
 **git stash**可以暂存当前的工作区内容
 ##### 可以先暂存当前的工作区的内容
@@ -155,7 +155,7 @@ git stash show stash@{2}
 ```shell
 git stash clear
 ```
-### 分支
+## 分支
 分支在Git里面是比较廉价的，我们在开发的时候可以在本地仓库创建很多条分支
 ##### 新建一条名字为dev的分支
 ```shell
@@ -205,7 +205,7 @@ git push origin --delete dev
 ```shell
 git cherry-pick f0299e2
 ```
-### 合并分支`rebase`和`merge`
+## 合并分支`rebase`和`merge`
 ####在工作中，如果团队开发同一个项目的人数特别多的时候，每个人都在自己的分支上开发<br>
 在开发过程中，为了使提交记录直观，方便在一条分支上查看提交记录，可以对分支进行衍合，一般是在做了一些小的修改之后会用它<br>
 将修改`commit`到本地分支上之后<br>
@@ -232,7 +232,7 @@ git checkout dev
 ```shell
 git merge origin/dev_homepageFix
 ```
-### 撤销操作
+## 撤销操作
 
 当我们想去整理我的提交，或者是把不该这次提交的修改提交了，我们可以对修改进行撤销，或者对提交进行撤销
 ##### 恢复暂存区的所有文件到工作区
@@ -262,7 +262,7 @@ git reset 2126dce
 ```shell
 git revert 2126dce
 ```
-###起别名
+##起别名
 当我们有比较常用的命令行用的比较频繁，但是我们又觉得完整把它们敲出来费事
 #####可以在 `~/.gitconfig` 文件里面进行设置别名,添加`alias`
 ```shell
