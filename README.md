@@ -2,7 +2,7 @@
 自己在工作中常用的git命令行！
 
 ## <a name="basic">Git基本操作</a>
-### 用户信息
+## 用户信息
 当我们要进行Git提交的时候，我们作为提交者要以什么姓名和电子邮件地址进行提交？
 ```shell
 git config --global user.name "DefaultYuan"
