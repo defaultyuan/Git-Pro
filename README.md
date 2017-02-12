@@ -215,13 +215,13 @@ git cherry-pick f0299e2
 ```shell
 git rebase
 ```
+为了方便讲解，`origin/dev_homepageFix`这个远程分支是随便写的分支名<br>
 当这次`commit`要衍合到`dev_homepageFix`分支上时<br>
-为了方便讲解，`origin/dev_homepageFix`这个远程分支是随便写的分支名
 ```shell
 git rebase origin/dev_homepageFix
 ```
 最后就可以`push`跟远程仓库同步了
-#####当我们到项目接近尾声的时候，需要将各自的分支都合并到`dev`分支上去<br>
+####当我们到项目接近尾声的时候，需要将各自的分支都合并到`dev`分支上去<br>
 先抓取最新仓库更新
 ```shell
 git fetch
