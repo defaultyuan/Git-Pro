@@ -207,6 +207,33 @@ git push origin --delete dev
 ```shell
 git cherry-pick f0299e2
 ```
+### 合并分支`rebase`和`merge`
+####在工作中，如果团队开发同一个项目的人数特别多的时候，每个人都在自己的分支上开发
+#####在开发过程中，为了使提交记录直观，方便在一条分支上查看提交记录，可以对分支进行衍合<br>
+将修改`commit`到本地分支上之后
+*当本地分支上有相对应的远程分支，可以直接使用
+```shell
+git rebase
+```
+*当这次`commit`要衍合到`dev_homepageFix`分支上时
+为了方便讲解，`origin/dev_homepageFix`这个远程分支是随便写的分支名
+```shell
+git rebase origin/dev_homepageFix
+```
+最后就可以`push`跟远程仓库同步了
+#####当我们到项目接近尾声的时候，需要将各自的分支都合并到`dev`分支上去
+先抓取最新仓库更新
+```shell
+git fetch
+```
+然后切到`dev`分支上
+```shell
+git checkout dev
+```
+再分别合并各个分支，这里以`dev_homepageFix`分支为例
+```shell
+git merge origin/dev_homepageFix
+```
 ### 撤销操作
 
 当我们想去整理我的提交，或者是把不该这次提交的修改提交了，我们可以对修改进行撤销，或者对提交进行撤销
@@ -251,8 +278,6 @@ lg = log
 ```
 然后试一下`git st`就管用了！
 
-
-TODO `rebase`<br>
 TODO `tag`<br>
 
 [微博:DefaultYuan](http://weibo.com/2792951481)
